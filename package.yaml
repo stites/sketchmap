@@ -1,0 +1,31 @@
+name: sketchmap
+version: 0.1.0.0
+
+ghc-options: -Wall
+
+default-extensions:
+  - BangPatterns
+  - LambdaCase
+  - OverloadedStrings
+  - ViewPatterns
+
+dependencies:
+  - base
+
+library:
+  source-dirs: src
+
+tests:
+  doctest:
+    main: DocTest.hs
+    source-dirs: test
+    dependencies:
+      - sketchmap
+      - doctest
+
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - sketchmap
+      - hspec
